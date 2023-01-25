@@ -37,7 +37,7 @@ jobs:
       run: docker tag ashok:latest public.ecr.aws/o2k8v2b1/ashok:latest
     - name: push
       run: docker push public.ecr.aws/o2k8v2b1/ashok:latest
-        - name: terraform directory
+    - name: terraform directory
       run : mkdir terraform
     - name: ading file
       run : cp terraform.tf terraform
