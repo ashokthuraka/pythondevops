@@ -31,11 +31,18 @@ jobs:
     - name: Login to Amazon ECR
       id: login-ecr
       uses: aws-actions/amazon-ecr-login@v1
+    - name: build
+      run: docker build -t ashok .
+    - name: tag
+      run: docker tag ashok:latest public.ecr.aws/o2k8v2b1/ashok:latest
+    - name: push
+      run: docker push public.ecr.aws/o2k8v2b1/ashok:latest
     - name: intializing teffaform
       run: terraform init
     - name: plan
       run: terraform plan
     - name: terraform build
       run: terraform apply -auto-approve
+    
 
    
