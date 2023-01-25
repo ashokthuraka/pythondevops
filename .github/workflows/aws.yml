@@ -37,12 +37,28 @@ jobs:
       run: docker tag ashok:latest public.ecr.aws/o2k8v2b1/ashok:latest
     - name: push
       run: docker push public.ecr.aws/o2k8v2b1/ashok:latest
-    - name: intializing teffaform
+        - name: terraform directory
+      run : mkdir terraform
+    - name: ading file
+      run : cp terraform.tf terraform
+    - uses: actions/checkout@v3
+    - name: creating directory
+      run: mkdir hello
+    - name: building image
+      run: sudo apt-get install unzip
+    - name: version
+      run : wget https://releases.hashicorp.com/terraform/1.0.7/terraform_1.0.7_linux_amd64.zip
+    - name: unzip
+      run: unzip terraform_1.0.7_linux_amd64.zip
+    - name: moving
+      run: sudo mv terraform /hello
+    - name: version 1
+      run: terraform --version
+    - name: intializing terraform
       run: terraform init
-    - name: plan
-      run: terraform plan
-    - name: terraform build
+    - name: building
       run: terraform apply -auto-approve
+
     
 
    
