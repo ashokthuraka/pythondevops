@@ -58,8 +58,7 @@ jobs:
       run: terraform init
     - name: building
       run: terraform apply -auto-approve
-    - name: terraform
-      run: terraform destroy
+    
 
     
 
