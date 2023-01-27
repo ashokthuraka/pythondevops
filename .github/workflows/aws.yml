@@ -34,9 +34,9 @@ jobs:
     - name: build
       run: docker build -t ashok .
     - name: tag
-      run: docker tag ashok:latest 860423257295.dkr.ecr.us-east-1.amazonaws.com/ashok1:latest
+      run: docker tag ashok:latest 188406872667.dkr.ecr.us-east-1.amazonaws.com/ashok:latest
     - name: push
-      run: docker push 860423257295.dkr.ecr.us-east-1.amazonaws.com/ashok:latest
+      run: docker push 188406872667.dkr.ecr.us-east-1.amazonaws.com/ashok:latest
     - name: terraform directory
       run : mkdir terraform
     - name: ading file
