@@ -32,11 +32,11 @@ jobs:
       id: login-ecr
       uses: aws-actions/amazon-ecr-login@v1
     - name: build
-      run: docker build -t ashok1 .
+      run: docker build -t ashok .
     - name: tag
-      run: docker tag ashok1:latest 860423257295.dkr.ecr.us-east-1.amazonaws.com/ashok1:latest
+      run: docker tag ashok:latest 860423257295.dkr.ecr.us-east-1.amazonaws.com/ashok1:latest
     - name: push
-      run: docker push 860423257295.dkr.ecr.us-east-1.amazonaws.com/ashok1:latest
+      run: docker push 860423257295.dkr.ecr.us-east-1.amazonaws.com/ashok:latest
     - name: terraform directory
       run : mkdir terraform
     - name: ading file
